@@ -1,0 +1,8 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(88, 88, 209);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

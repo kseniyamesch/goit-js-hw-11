@@ -24,8 +24,9 @@ export function galleryMarkup (gallery, images) {
 
 
     gallery.insertAdjacentHTML('beforeend', markup);
-    
 }
- 
 
+export function clearMarkup (gallery) {
+    gallery.innerHTML = '';
+}
 

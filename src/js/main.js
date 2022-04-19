@@ -5,6 +5,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import NewsApiService from "./api-service";
 
 import { galleryMarkup } from "./markup";
+import {clearMarkup} from "./markup";
 
 const formRef = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
@@ -18,6 +19,8 @@ loadMoreBtn.addEventListener('click', onLoadMore);
 
 function onFormSubmit (evt) {
     evt.preventDefault();
+    clearMarkup(gallery);
+    // uppendMarkup();
     // userInput = evt.currentTarget.elements[0].value.trim();
 
     // const BASE_URL = 'https://pixabay.com/api/';
@@ -73,3 +76,7 @@ function onFormSubmit (evt) {
 function onLoadMore () {
     newsApiService.getImage().then(data => galleryMarkup(gallery, data.hits));;
 }
+
+// function uppendMarkup (gallery) {
+//     gallery.insertAdjacentHTML('beforeend', markup);
+// }

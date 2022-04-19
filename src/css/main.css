@@ -6,3 +6,43 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: 380px;
+    max-width: 1140px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.photo-card {
+   margin: 15px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    
+}
+
+img {
+    height: 250px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.load-more {
+    margin: 15px auto;
+    padding: 8px;
+display: block;
+background-color: rgb(88, 88, 209);
+color: white;
+border-radius: 4px;
+border-width: 0;
+}
+.info {
+    padding: 10px;
+}
+p {
+    margin: 0;

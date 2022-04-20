@@ -1,6 +1,5 @@
 import axios from "axios";
-import Notiflix from "notiflix";
-import { galleryMarkup } from "./markup";
+
 
 export default class NewsApiService {
     constructor () {
@@ -18,22 +17,8 @@ export default class NewsApiService {
         try {
           const response = await axios.get(`${BASE_URL}${options}&${pagination}`);
 
-
-        //   const totalHits = response.data.totalHits;
-        //   if (totalHits === 0) {
-        //     Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
-        //     return;
-        //   }
-
-        //   Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
         this.page += 1;
 
-        //   const data = response.data.hits;
-
-        //   galleryMarkup(gallery, data);
-        //   console.log(data)
-
-        //   return data;
         const data = response.data
         console.log(data)
         return data;

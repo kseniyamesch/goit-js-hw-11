@@ -14,12 +14,7 @@ const loadMoreBtn = document.querySelector('.load-more');
 
 loadMoreBtn.classList.add('is-hidden');
 
-let galleryLightBox = new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionsData: 'alt',
-    captionDelay: 250,
-    nav: true,
-});
+
 
 const newsApiService = new NewsApiService();
 formRef.addEventListener('submit', onFormSubmit);
@@ -45,6 +40,13 @@ function onFormSubmit (evt) {
             return;
         }
         galleryMarkup(gallery, data.hits);
+
+        let galleryLightBox = new SimpleLightbox('.gallery a', {
+            captions: true,
+            captionsData: 'alt',
+            captionDelay: 250,
+            nav: true,
+        });
 
         Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
         loadMoreBtn.classList.remove('is-hidden');

@@ -11,7 +11,7 @@ export default class NewsApiService {
         const BASE_URL = 'https://pixabay.com/api/';
         const options = `?key=26835433-5e813848e8d233e22f218db79&q=${this.userInput}&image_type=photo&orientation=horizontal&safesearch=true`;
         const pagination = `page=${this.page}&per_page=40`
-        const axios = require('axios');
+        
 
         if (this.userInput !== "")
         try {
